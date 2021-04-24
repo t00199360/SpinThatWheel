@@ -19,11 +19,19 @@ public class SceneSwitcher : MonoBehaviour
     
     public static void loadWheelScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
-    public static void loadMainMenu()
+    public static void loadMainMenu()   //this should say load selectionscene
+    {
+        SceneManager.LoadScene(1);
+    }
+    public static void loadFirstMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    public static void loadLeaderboard()
+    {
+        SceneManager.LoadScene(3);
     }
 }
