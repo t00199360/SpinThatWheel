@@ -129,6 +129,5 @@ namespace GoogleMobileAds.Api
         {
             return new ResponseInfo(this.client.GetResponseInfoClient());
         }
-
     }
 }

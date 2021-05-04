@@ -24,6 +24,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public static void loadMainMenu()   //this should say load selectionscene
     {
+        Social.ReportProgress("CgkIiMHV2twCEAIQAg", 100, success => { });
         SceneManager.LoadScene(1);
     }
     public static void loadFirstMenu()
@@ -32,6 +33,10 @@ public class SceneSwitcher : MonoBehaviour
     }
     public static void loadLeaderboard()
     {
-        SceneManager.LoadScene(3);
+        Social.ShowLeaderboardUI();
+    }
+    public static void loadAchievements()
+    {
+        Social.ShowAchievementsUI();
     }
 }

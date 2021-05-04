@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAdManagerEnabled: 1
   isAdMobEnabled: 1
-  adMobAndroidAppId: ca-app-pub-3940256099942544/6300978111
-  adMobIOSAppId: ca-app-pub-3940256099942544/6300978111
+  adMobAndroidAppId: ca-app-pub-3031638288531104~5969846470
+  adMobIOSAppId: ca-app-pub-3031638288531104~5969846470
   delayAppMeasurementInit: 0

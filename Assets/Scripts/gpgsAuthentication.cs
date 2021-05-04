@@ -7,7 +7,6 @@ using UnityEngine.SocialPlatforms;
 public class gpgsAuthentication : MonoBehaviour
 {
     public static PlayGamesPlatform platform;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +31,7 @@ public class gpgsAuthentication : MonoBehaviour
             }
         });
     }
+
+    
 }
 

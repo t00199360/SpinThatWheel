@@ -9,16 +9,17 @@ public class SpinTheWheel : MonoBehaviour
     public List<string> passed_prizes;
     public List<AnimationCurve> animationCurves;
 
-
     private bool spinning;
     private float anglePerItem;
     private int randomTime;
     private int itemNumber;
+    public int numberOfSpins;
     GameObject obj;
-
+    
 
     void Start()
     {
+        numberOfSpins = 0;
         passed_prizes = UserDefinedGames.GameList;
         Debug.Log(UserDefinedGames.GameList.Count + " :is the size of the list passed");
         
@@ -44,14 +45,17 @@ public class SpinTheWheel : MonoBehaviour
             float maxAngle = 360 * randomTime + (itemNumber * anglePerItem);
 
             StartCoroutine(SpinWheelClockwise(5 * randomTime, maxAngle));
-
+            
         }
     }
 
+
     IEnumerator SpinWheelClockwise(float time, float maxAngle)
     {
+        numberOfSpins++;
+        Social.ReportScore(numberOfSpins, "CgkIiMHV2twCEAIQAA", success => { });
         spinning = true;
-
+        Social.ReportProgress("CgkIiMHV2twCEAIQAQ", 100, success => { });
         float timer = 0.0f;
         float startAngle = transform.eulerAngles.x;
         maxAngle = maxAngle - startAngle;
@@ -70,10 +74,7 @@ public class SpinTheWheel : MonoBehaviour
 
         transform.eulerAngles = new Vector3( maxAngle + startAngle,270.0f, 270.0f );
         spinning = false;
-
+        numberOfSpins++;
         Debug.Log("Prize: " + prize[itemNumber]);//use prize[itemNumber] as per requirement
-
-
-
     }
 }
